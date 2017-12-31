@@ -1,0 +1,9 @@
+*.dsn
+*.ses
+*.gbr
+*.drl
+*.bak
+*-bak
+_autosave*
+_z/
+*/gerbers/*
