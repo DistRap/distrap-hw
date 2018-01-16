@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name f4disco_minimal)(type KiCad)(uri "$(KIPRJMOD)/f4disco_minimal.pretty")(options "")(descr ""))
+  (lib (name libs)(type KiCad)(uri "$(KIPRJMOD)/../libs")(options "")(descr ""))
+)
