@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 1142)
+    (start_pass_no 898)
     (layer_rule F.Cu
       (active on)
       (preferred_direction vertical)
@@ -96,7 +96,7 @@
     (clearance_class my)
     (via_rule my)
     (rule
-      (width 500.0)
+      (width 800.0)
     )
     (circuit 
       (use_layer F.Cu B.Cu)

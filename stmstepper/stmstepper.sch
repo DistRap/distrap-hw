@@ -688,7 +688,7 @@ $EndComp
 Wire Wire Line
 	2000 7350 2900 7350
 Wire Wire Line
-	2900 7350 2900 7450
+	2900 7250 2900 7450
 Wire Wire Line
 	2000 7950 2900 7950
 Wire Wire Line
@@ -697,17 +697,6 @@ Text Notes 900  7700 0    157  ~ 31
 J7-B
 Text Notes 900  8950 0    157  ~ 31
 J8-B
-$Comp
-L CONN_01X02 P1
-U 1 1 5A94BB91
-P 7500 8750
-F 0 "P1" H 7500 8900 50  0000 C CNN
-F 1 "CONN_01X02" V 7600 8750 50  0000 C CNN
-F 2 "Connectors:AK300-2" H 7500 8750 50  0001 C CNN
-F 3 "" H 7500 8750 50  0000 C CNN
-	1    7500 8750
-	-1   0    0    1   
-$EndComp
 Text Label 8250 8700 2    60   ~ 0
 VMOT
 Wire Wire Line
@@ -828,7 +817,7 @@ $EndComp
 Wire Wire Line
 	2000 4800 2900 4800
 Wire Wire Line
-	2900 4800 2900 4900
+	2900 4700 2900 4900
 Wire Wire Line
 	2000 5400 2900 5400
 Wire Wire Line
@@ -1317,4 +1306,59 @@ Wire Wire Line
 Wire Wire Line
 	14000 6900 14000 7100
 Connection ~ 14000 7100
+$Comp
+L Conn_01x04 P1
+U 1 1 5A96F314
+P 7500 8800
+F 0 "P1" H 7500 9000 50  0000 C CNN
+F 1 "Conn_01x04" H 7650 8500 50  0000 C CNN
+F 2 "" H 7500 8800 50  0001 C CNN
+F 3 "" H 7500 8800 50  0001 C CNN
+	1    7500 8800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7750 8700 7750 8600
+Wire Wire Line
+	7750 8600 7700 8600
+Connection ~ 7750 8700
+Wire Wire Line
+	7750 8800 7750 8900
+Wire Wire Line
+	7750 8900 7700 8900
+Connection ~ 7750 8800
+$Comp
+L CP C1
+U 1 1 5A96FBDF
+P 2900 4550
+F 0 "C1" H 2925 4650 50  0000 L CNN
+F 1 "CP10u" H 2925 4450 50  0000 L CNN
+F 2 "Capacitors_SMD:CP_Elec_8x6.7" H 2938 4400 50  0001 C CNN
+F 3 "" H 2900 4550 50  0001 C CNN
+	1    2900 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 4400 2200 4400
+Wire Wire Line
+	2200 4400 2200 4700
+Connection ~ 2200 4700
+Connection ~ 2900 4800
+$Comp
+L CP C2
+U 1 1 5A96FFD3
+P 2900 7100
+F 0 "C2" H 2925 7200 50  0000 L CNN
+F 1 "CP10u" H 2925 7000 50  0000 L CNN
+F 2 "Capacitors_SMD:CP_Elec_8x6.7" H 2938 6950 50  0001 C CNN
+F 3 "" H 2900 7100 50  0001 C CNN
+	1    2900 7100
+	1    0    0    -1  
+$EndComp
+Connection ~ 2900 7350
+Wire Wire Line
+	2900 6950 2200 6950
+Wire Wire Line
+	2200 6950 2200 7250
+Connection ~ 2200 7250
 $EndSCHEMATC
