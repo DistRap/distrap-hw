@@ -1,5 +1,5 @@
 
-(rules PCB stmstamp
+(rules PCB stmstepper
   (snap_angle 
     fortyfive_degree
   )
@@ -11,18 +11,18 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 103)
+    (start_pass_no 1142)
     (layer_rule F.Cu
-      (active on)
-      (preferred_direction horizontal)
-      (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 2.0)
-    )
-    (layer_rule B.Cu
       (active on)
       (preferred_direction vertical)
       (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 2.0)
+      (against_preferred_direction_trace_costs 2.1)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.9)
     )
   )
   (rule
@@ -69,18 +69,19 @@
     )
   )
   (class "kicad_default"
-    GND VDD "Net-(C1-Pad1)" "Net-(C2-Pad1)" /VBAT /NRST /VREF /VDDA
-    +3V3 /GPIO13 "/SPI3_SCK" "/UART2_TX" "/UART2_RX" "Net-(R1-Pad1)" "/QSPI_IO2" /GPIO0
-    /GPIO1 "/TIM9_CH1" "/TIM9_CH2" /GPIO2 /GPIO3 /GPIO4 "/ADC_IN10" "/SPI2_MOSI"
-    "/SPI2_MISO" "/ADC_IN13" "/TIM2_CH1" "/TIM2_CH2" "/ADC_IN2" "/ADC_IN3" "/DAC1_OUT" "/SPI1_SCK"
-    "/SPI1_MISO" "/ADC_IN7" "/ADC_IN14" "/ADC_IN15" "/TIM3_CH3" "/TIM3_CH4" "/QSPI_CLK" /GPIO5
-    "/TIM1_CH1N" "/TIM1_CH1" "/TIM1_CH2N" "/TIM1_CH2" "/TIM1_CH3N" "/TIM1_CH3" /GPIO6 "/TIM1_BKIN"
-    "/I2C2_SCL" "/I2C2_SDA" "/UART5_RX" "/UART5_TX" "/TIM12_CH1" "/TIM12_CH2" /GPIO7 /GPIO8
-    /GPIO9 "/QSPI_IO0" "/TIM4_CH1" "/QSPI_IO3" /GPIO10 /GPIO11 "/TIM8_CH1" "/TIM8_CH2"
-    "/TIM8_CH3" "/TIM8_CH4" "/CAN3_RX" "/SPI2_SCK" "/CAN1_TX" "/CAN1_RX" "/CAN3_TX" "/QSPI_IO1"
-    "/SPI3_MISO" "/SPI3_MOSI" "/UART4_RX" "/UART4_TX" /GPIO15 "/SPI1_MOSI" "/TIM3_CH1" "/TIM3_CH2"
-    "/QSPI_NCS" "/TIM4_CH2" "/I2C1_SDA" "/I2C1_SCL" /LEDR "Net-(D1-Pad1)" /LEDG "Net-(D2-Pad1)"
-    "Net-(D3-Pad1)" /VIN /VCAP1 /VCAP2 /SWCLK /SWDIO "/UART1_TX" "/UART1_RX"
+    GND /+3V3 /GPIO0 "/TIM4_CH2" /GPIO11 "/QSPI_NCS" "/I2C1_SCL" "/QSPI_IO2"
+    "/I2C1_SDA" "/QSPI_IO1" "/A-EN" /GPIO10 "/B-EN" /GPIO13 "/B-MS2" "/SPI3_MOSI"
+    "/B-MS3" "/SPI3_MISO" "/CAN3_TX" "/SPI3_SCK" "/CAN3_RX" "Net-(J1-Pad21)" /GPIO15 "/TIM8_CH4"
+    /SWCLK "/TIM8_CH3" /SWDIO "/TIM8_CH2" "/B-DIR" "/TIM8_CH1" "/B-MS1" /GPIO7
+    "/A-MS3" "/CAN1_TX" "/A-DIR" "/CAN1_RX" "/TIM4_CH1" "/UART5_TX" "/A-MS1" "/UART5_RX"
+    "/A-MS2" /VDD "/TIM12_CH2" "/TIM12_CH1" "/TIM1_BKIN" "/I2C2_SCL" "/TIM1_CH3N" "/I2C2_SDA"
+    "/TIM1_CH3" "/ADC_IN7" "/TIM1_CH2N" /GPIO6 "/B-STEP" /GPIO5 "/TIM1_CH1N" "/QSPI_CLK"
+    "/A-STEP" "/ADC_IN14" "/SPI1_MOSI" "/SPI1_SCK" "/SPI1_MISO" "Net-(J3-Pad21)" "/DAC1_OUT" "/TIM3_CH4"
+    "/TIM2_CH2" "/TIM3_CH3" "/TIM2_CH1" "/ADC_IN13" "/ADC_IN10" "/ADC_IN15" "/SPI2_MOSI" /NRST
+    "/SPI2_MISO" "/ADC_IN3" "/SPI2_SCK" "/ADC_IN2" /GPIO4 /VBAT /GPIO3 "/TIM9_CH2"
+    /GPIO2 "/TIM9_CH1" "Net-(J4-Pad21)" /GPIO1 "/A-1B" "/A-1A" "/A-2A" "/A-2B"
+    "/A-RST" "/B-1B" "/B-1A" "/B-2A" "/B-2B" "/B-RST" /EV "Net-(JP2-Pad1)"
+    "Net-(JP2-Pad2)" "Net-(U1-Pad5)" "Net-(P6-Pad3)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
@@ -91,6 +92,7 @@
     )
   )
   (class my
+    /VMOT
     (clearance_class my)
     (via_rule my)
     (rule

@@ -1,4 +1,4 @@
-update=Út 27. únor 2018, 00:51:58 CET
+update=Út 27. únor 2018, 23:00:36 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=../stmstamp
+LibDir=../libs
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -62,4 +62,3 @@ LibName30=atmel
 LibName31=contrib
 LibName32=valves
 LibName33=stm32
-LibName34=sn65hvd230
