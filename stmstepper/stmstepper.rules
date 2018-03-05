@@ -1,0 +1,105 @@
+
+(rules PCB stmstepper
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 898)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.1)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.9)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_600:400_um"
+    (shape
+      (circle F.Cu 600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_600:400_um" "Via[0-1]_600:400_um" default
+  )
+  (via 
+    "Via[0-1]_600:400_um-kicad_default" "Via[0-1]_600:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_600:400_um-my" "Via[0-1]_600:400_um" my
+  )
+  (via_rule
+    default "Via[0-1]_600:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_600:400_um-kicad_default"
+  )
+  (via_rule
+    my "Via[0-1]_600:400_um-my"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND /+3V3 /GPIO0 "/TIM4_CH2" /GPIO11 "/QSPI_NCS" "/I2C1_SCL" "/QSPI_IO2"
+    "/I2C1_SDA" "/QSPI_IO1" "/A-EN" /GPIO10 "/B-EN" /GPIO13 "/B-MS2" "/SPI3_MOSI"
+    "/B-MS3" "/SPI3_MISO" "/CAN3_TX" "/SPI3_SCK" "/CAN3_RX" "Net-(J1-Pad21)" /GPIO15 "/TIM8_CH4"
+    /SWCLK "/TIM8_CH3" /SWDIO "/TIM8_CH2" "/B-DIR" "/TIM8_CH1" "/B-MS1" /GPIO7
+    "/A-MS3" "/CAN1_TX" "/A-DIR" "/CAN1_RX" "/TIM4_CH1" "/UART5_TX" "/A-MS1" "/UART5_RX"
+    "/A-MS2" /VDD "/TIM12_CH2" "/TIM12_CH1" "/TIM1_BKIN" "/I2C2_SCL" "/TIM1_CH3N" "/I2C2_SDA"
+    "/TIM1_CH3" "/ADC_IN7" "/TIM1_CH2N" /GPIO6 "/B-STEP" /GPIO5 "/TIM1_CH1N" "/QSPI_CLK"
+    "/A-STEP" "/ADC_IN14" "/SPI1_MOSI" "/SPI1_SCK" "/SPI1_MISO" "Net-(J3-Pad21)" "/DAC1_OUT" "/TIM3_CH4"
+    "/TIM2_CH2" "/TIM3_CH3" "/TIM2_CH1" "/ADC_IN13" "/ADC_IN10" "/ADC_IN15" "/SPI2_MOSI" /NRST
+    "/SPI2_MISO" "/ADC_IN3" "/SPI2_SCK" "/ADC_IN2" /GPIO4 /VBAT /GPIO3 "/TIM9_CH2"
+    /GPIO2 "/TIM9_CH1" "Net-(J4-Pad21)" /GPIO1 "/A-1B" "/A-1A" "/A-2A" "/A-2B"
+    "/A-RST" "/B-1B" "/B-1A" "/B-2A" "/B-2B" "/B-RST" /EV "Net-(JP2-Pad1)"
+    "Net-(JP2-Pad2)" "Net-(U1-Pad5)" "Net-(P6-Pad3)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class my
+    /VMOT
+    (clearance_class my)
+    (via_rule my)
+    (rule
+      (width 800.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
