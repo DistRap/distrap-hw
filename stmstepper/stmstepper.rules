@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 898)
+    (start_pass_no 278)
     (layer_rule F.Cu
       (active on)
       (preferred_direction vertical)
@@ -47,6 +47,9 @@
     "Via[0-1]_600:400_um-kicad_default" "Via[0-1]_600:400_um" "kicad_default"
   )
   (via 
+    "Via[0-1]_600:400_um-motors" "Via[0-1]_600:400_um" motors
+  )
+  (via 
     "Via[0-1]_600:400_um-my" "Via[0-1]_600:400_um" my
   )
   (via_rule
@@ -54,6 +57,9 @@
   )
   (via_rule
     "kicad_default" "Via[0-1]_600:400_um-kicad_default"
+  )
+  (via_rule
+    motors "Via[0-1]_600:400_um-motors"
   )
   (via_rule
     my "Via[0-1]_600:400_um-my"
@@ -79,8 +85,7 @@
     "/A-STEP" "/ADC_IN14" "/SPI1_MOSI" "/SPI1_SCK" "/SPI1_MISO" "Net-(J3-Pad21)" "/DAC1_OUT" "/TIM3_CH4"
     "/TIM2_CH2" "/TIM3_CH3" "/TIM2_CH1" "/ADC_IN13" "/ADC_IN10" "/ADC_IN15" "/SPI2_MOSI" /NRST
     "/SPI2_MISO" "/ADC_IN3" "/SPI2_SCK" "/ADC_IN2" /GPIO4 /VBAT /GPIO3 "/TIM9_CH2"
-    /GPIO2 "/TIM9_CH1" "Net-(J4-Pad21)" /GPIO1 "/A-1B" "/A-1A" "/A-2A" "/A-2B"
-    "/A-RST" "/B-1B" "/B-1A" "/B-2A" "/B-2B" "/B-RST" /EV "Net-(JP2-Pad1)"
+    /GPIO2 "/TIM9_CH1" "Net-(J4-Pad21)" /GPIO1 "/A-RST" "/B-RST" /EV "Net-(JP2-Pad1)"
     "Net-(JP2-Pad2)" "Net-(U1-Pad5)" "Net-(P6-Pad3)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
@@ -91,12 +96,23 @@
       (use_layer F.Cu B.Cu)
     )
   )
+  (class motors
+    "/A-1B" "/A-1A" "/A-2A" "/A-2B" "/B-1B" "/B-1A" "/B-2A" "/B-2B"
+    (clearance_class motors)
+    (via_rule motors)
+    (rule
+      (width 800.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
   (class my
     /VMOT
     (clearance_class my)
     (via_rule my)
     (rule
-      (width 800.0)
+      (width 2000.0)
     )
     (circuit 
       (use_layer F.Cu B.Cu)
