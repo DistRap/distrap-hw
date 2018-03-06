@@ -1,11 +1,9 @@
 *.dsn
 *.ses
-*.gbr
 *.drl
 *.bak
 *-bak
+*.bin
 _autosave*
 _z/
-*/gerbers/*
-*gerbers*
 *.zip
