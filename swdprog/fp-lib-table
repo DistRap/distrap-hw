@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name usb-a-male-tht)(type KiCad)(uri "$(KIPRJMOD)/usb-a-male-tht.pretty")(options "")(descr ""))
+)
