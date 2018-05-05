@@ -6,7 +6,7 @@
 5;"C12";"C_0805";1;"4u7";;;
 6;"R1";"R_0805";1;"10K";;;
 7;"R2";"R_0805";1;"47";;;
-8;"U1";"LQFP-100_14x14mm_Pitch0.5mm";1;"STM32F765VIT6";;;
+8;"U1";"LQFP-100_14x14mm_Pitch0.5mm";1;"STM32F756VGTx";;;
 9;"L1";"R_0805";1;"Ferrite_Bead_Small";;;
 10;"C17";"CP_Tantalum_Case-C_EIA-6032-28_Reflow";1;"10u";;;
 11;"C18";"CP_Tantalum_Case-C_EIA-6032-28_Reflow";1;"22u";;;
@@ -19,3 +19,8 @@
 18;"SW1";"SW_SPST_FSMSM";1;"SW_Push";;;
 19;"Y1";"Crystal_SMD_Abracon_ABM3B-4pin_5.0x3.2mm";1;"Crystal_GND24";;;
 20;"J5";"Pin_Header_Straight_2x05_Pitch2.54mm";1;"Conn_02x05_Odd_Even";;;
+21;"REF***";"OSHW-Logo2_14.6x12mm_SilkScreen";1;"OSHW-Logo2_14.6x12mm_SilkScreen";;;
+22;"G***";"distrap_logo_micro_5x7mm";1;"LOGO";;;
+23;"G***";"base48_22x6";1;"LOGO";;;
+24;"G***";"distrap_logo_full_17x18";1;"LOGO";;;
+25;"G***";"haskell_11x8";1;"LOGO";;;

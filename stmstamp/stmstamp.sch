@@ -39,8 +39,8 @@ $Descr A2 23386 16535
 encoding utf-8
 Sheet 1 1
 Title "STMSTAMP"
-Date "2017-12-24"
-Rev "1"
+Date "2018-03-06"
+Rev "2"
 Comp "base48.cz"
 Comment1 ""
 Comment2 ""
@@ -649,9 +649,9 @@ Text Label 18100 8050 0    60   ~ 0
 SPI1_SCK
 Text Label 6750 11650 0    60   ~ 0
 SPI1_MOSI
-Text Label 18100 8650 0    60   ~ 0
-CAN1_TX
 Text Label 18100 8750 0    60   ~ 0
+CAN1_TX
+Text Label 18100 8650 0    60   ~ 0
 CAN1_RX
 Text Label 6750 11250 0    60   ~ 0
 SPI2_SCK
