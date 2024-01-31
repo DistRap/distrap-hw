@@ -7,3 +7,5 @@
 _autosave*
 _z/
 *.zip
+*.lck
+\#auto_saved_files#
