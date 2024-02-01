@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "WeidmullerRJ45")(type "KiCad")(uri "${KIPRJMOD}/WeidmullerRJ45.pretty")(options "")(descr ""))
+)
