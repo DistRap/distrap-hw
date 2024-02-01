@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "AS5407")(type "KiCad")(uri "${KIPRJMOD}/as5047.kicad_sym")(options "")(descr ""))
+  (lib (name "sn65lvdtxy")(type "KiCad")(uri "${KIPRJMOD}/sn65lvdtxy.kicad_sym")(options "")(descr ""))
+)
