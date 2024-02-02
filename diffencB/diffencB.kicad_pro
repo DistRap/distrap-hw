@@ -172,7 +172,9 @@
         }
       ],
       "track_widths": [
-        0.0
+        0.0,
+        0.25,
+        0.4
       ],
       "via_dimensions": [
         {
@@ -405,7 +407,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "diffenc.kicad_pro",
+    "filename": "diffencB.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -436,7 +438,12 @@
       "GND": "rgb(64, 255, 13)"
     },
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "Default",
+        "pattern": "/LVD1_P"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
